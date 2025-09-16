@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0379FE68-DF79-437C-BA27-CFD0BCD6A225}|ConsoleApp4\\ConsoleApp4.csproj|c:\\users\\vizsga\\desktop\\asztali13\\2025.09.16\\consoleapp1\\consoleapp4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0379FE68-DF79-437C-BA27-CFD0BCD6A225}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DF1805DB-6A1C-46FF-BF92-D6B2111FA98F}|ConsoleApp3\\ConsoleApp3.csproj|c:\\users\\vizsga\\desktop\\asztali13\\2025.09.16\\consoleapp1\\consoleapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF1805DB-6A1C-46FF-BF92-D6B2111FA98F}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -24,11 +28,24 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\ConsoleApp4\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp4\\Program.cs",
+              "ToolTip": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\ConsoleApp4\\Program.cs",
+              "RelativeToolTip": "ConsoleApp4\\Program.cs",
+              "ViewState": "AgIAANYAAAAAAAAAAAAIwOEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T08:21:43.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\ConsoleApp3\\Program.cs",
               "RelativeDocumentMoniker": "ConsoleApp3\\Program.cs",
               "ToolTip": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\ConsoleApp3\\Program.cs",
               "RelativeToolTip": "ConsoleApp3\\Program.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAkwEIAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAA4wFYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T07:02:24.229Z",
               "EditorCaption": ""
