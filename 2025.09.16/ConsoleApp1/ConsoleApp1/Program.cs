@@ -19,10 +19,17 @@
             {
                 return $"Név: {_name}, Súly: {_weight}kg,  Jogosítvány: {(_dLicense?"Van":"Nincs")}";
             }
+            public void takeDrivingLicense()
+            {
+                _dLicense = false;
+                Console.WriteLine("Jogosítvány megvonva!");
+            }
         }
         static void Main(string[] args)
         {
             Szemely szemely1 = new Szemely("Peti", 55, true);
+            Console.WriteLine(szemely1.ToString());
+            szemely1.takeDrivingLicense();
             Console.WriteLine(szemely1.ToString());
         }
     }
