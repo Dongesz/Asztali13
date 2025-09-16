@@ -1,0 +1,15 @@
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\bin\Debug\net8.0\ConsoleApp2.exe
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\bin\Debug\net8.0\ConsoleApp2.deps.json
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\bin\Debug\net8.0\ConsoleApp2.runtimeconfig.json
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\bin\Debug\net8.0\ConsoleApp2.dll
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\bin\Debug\net8.0\ConsoleApp2.pdb
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.AssemblyInfoInputs.cache
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.AssemblyInfo.cs
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.csproj.CoreCompileInputs.cache
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.sourcelink.json
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.dll
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\obj\Debug\net8.0\refint\ConsoleApp2.dll
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.pdb
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\obj\Debug\net8.0\ConsoleApp2.genruntimeconfig.cache
+C:\Users\Vizsga\Desktop\Asztali13\2025.09.16\ConsoleApp1\ConsoleApp2\obj\Debug\net8.0\ref\ConsoleApp2.dll
