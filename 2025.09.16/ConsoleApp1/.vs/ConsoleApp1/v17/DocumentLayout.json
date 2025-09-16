@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5BE0248-30C5-4234-835E-74BB83741882}|ConsoleApp2\\ConsoleApp2.csproj|c:\\users\\vizsga\\desktop\\asztali13\\2025.09.16\\consoleapp1\\consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5BE0248-30C5-4234-835E-74BB83741882}|ConsoleApp2\\ConsoleApp2.csproj|solutionrelative:consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51F9D16A-2271-4678-8FCA-DF0C32C3FCC9}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\vizsga\\desktop\\asztali13\\2025.09.16\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51F9D16A-2271-4678-8FCA-DF0C32C3FCC9}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF1805DB-6A1C-46FF-BF92-D6B2111FA98F}|ConsoleApp3\\ConsoleApp3.csproj|c:\\users\\vizsga\\desktop\\asztali13\\2025.09.16\\consoleapp1\\consoleapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF1805DB-6A1C-46FF-BF92-D6B2111FA98F}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,26 +24,14 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\ConsoleApp2\\Program.cs",
-              "RelativeDocumentMoniker": "ConsoleApp2\\Program.cs",
-              "ToolTip": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\ConsoleApp2\\Program.cs",
-              "RelativeToolTip": "ConsoleApp2\\Program.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAApwDoAAABIAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\ConsoleApp3\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp3\\Program.cs",
+              "ToolTip": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\ConsoleApp3\\Program.cs",
+              "RelativeToolTip": "ConsoleApp3\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T05:59:57.827Z",
+              "WhenOpened": "2025-09-16T07:02:24.229Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\ConsoleApp1\\Program.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
-              "ToolTip": "C:\\Users\\Vizsga\\Desktop\\Asztali13\\2025.09.16\\ConsoleApp1\\ConsoleApp1\\Program.cs",
-              "RelativeToolTip": "ConsoleApp1\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T05:26:58.552Z"
             }
           ]
         }
