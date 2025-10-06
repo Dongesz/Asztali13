@@ -8,10 +8,10 @@ namespace TerminalGame
 {
     internal class Player
     {
-        private string Name { get; set; }
+        public string Name { get; set; }
         public int Hp { get; set; }
-        private int Dp { get; set; }
-        private int Defense { get; set; }
+        public int Dp { get; set; }
+        public int Defense { get; set; }
 
         private readonly int _initialHp;
         private readonly int _initialDp;
@@ -29,17 +29,18 @@ namespace TerminalGame
             _initialDefense = defense;
         }
 
-        public void takeDamage(int Dp)
+        virtual public void takeDamage(int Dp)
         {
-            this.Hp -= Dp;
+            int damageTaken = Math.Max(1, Dp - Defense);
+            Hp -= damageTaken;
         }
 
-        public void attack(Enemy enemy)
+        virtual public void attack(Enemy enemy)
         {
             enemy.Hp -= Dp;
         }
 
-        public void resetStats()
+        virtual public void resetStats()
         {
             Hp = _initialHp;
             Dp = _initialDp;

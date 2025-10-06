@@ -8,10 +8,11 @@ namespace TerminalGame
 {
     internal class Enemy
     {
-        private string Name { get; set; }
+        public string Name { get; set; }
         public int Hp{ get; set; }
-        private int Dp{ get; set; }
-        private int Defense { get; set; }
+        public int Dp{ get; set; }
+        public int Defense { get; set; }
+        public bool IsRestrained { get; set; }
 
         private readonly int _initialHp;
         private readonly int _initialDp;
@@ -23,6 +24,7 @@ namespace TerminalGame
             Hp = hp; 
             Dp = dp; 
             Defense = defense;
+            IsRestrained = false;
 
             _initialHp = hp;
             _initialDp = dp;
@@ -44,6 +46,7 @@ namespace TerminalGame
             Hp = _initialHp;
             Dp = _initialDp;
             Defense = _initialDefense;
+            IsRestrained = false;
         }
 
     }
