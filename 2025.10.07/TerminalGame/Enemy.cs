@@ -31,17 +31,17 @@ namespace TerminalGame
             _initialDefense = defense;
         }
         
-        public void takeDamage(int Dp)
+        virtual public void takeDamage(int Dp)
         {
             this.Hp -= Dp;
         }
 
-        public void attack(Player player)
+        virtual public void attack(Player player)
         {
             player.Hp -= Dp;
         }
 
-        public void resetStats()
+        virtual public void resetStats()
         {
             Hp = _initialHp;
             Dp = _initialDp;

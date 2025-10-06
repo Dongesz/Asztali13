@@ -12,6 +12,7 @@ namespace TerminalGame
         public int Hp { get; set; }
         public int Dp { get; set; }
         public int Defense { get; set; }
+        public bool IsRestrained { get; set; }
 
         private readonly int _initialHp;
         private readonly int _initialDp;
@@ -45,6 +46,7 @@ namespace TerminalGame
             Hp = _initialHp;
             Dp = _initialDp;
             Defense = _initialDefense;
+            IsRestrained = false;
         }
     }
 }
