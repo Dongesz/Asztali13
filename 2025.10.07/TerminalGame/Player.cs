@@ -13,6 +13,8 @@ namespace TerminalGame
         public int Dp { get; set; }
         public int Defense { get; set; }
         public bool IsRestrained { get; set; }
+        public int MaxHp { get; set; }
+
 
         private readonly int _initialHp;
         private readonly int _initialDp;
@@ -24,6 +26,8 @@ namespace TerminalGame
             Hp = hp;
             Dp = dp;
             Defense = defense;
+            MaxHp = hp;
+
 
             _initialHp = hp;
             _initialDp = dp;

@@ -21,6 +21,7 @@ namespace TerminalGame
             Dp = 40;
             Defense = 10;
             Mana = 100;
+            MaxHp = 150;
 
             _initialHp = Hp;
             _initialDp = Dp;
@@ -41,6 +42,7 @@ namespace TerminalGame
                 Console.WriteLine($"{Name} casts a powerful spell!");
                 enemy.Hp -= Dp * 2;
                 Mana -= 30;
+                Console.WriteLine($"{Name}'s Mana: {Mana}");
             }
             else
             {
@@ -48,21 +50,21 @@ namespace TerminalGame
                 enemy.Hp -= Dp;
             }
         }
-
         public void heal()
         {
             if (Mana >= 20)
             {
                 Console.WriteLine($"{Name} heals self!");
-                Hp += 50;
+                Hp = Math.Min(Hp + 50, MaxHp);
                 Mana -= 20;
+                Console.WriteLine($"{Name}'s Mana: {Mana}");
+                Console.WriteLine($"{Name}'s HP after healing: {Hp}/{MaxHp}");
             }
             else
             {
                 Console.WriteLine($"{Name} tried to heal but has insufficient mana.");
             }
         }
-
         public void restrain(Enemy enemy)
         {
             if (Mana >= 90)
@@ -70,6 +72,7 @@ namespace TerminalGame
                 Console.WriteLine($"{Name} restrains the enemy, preventing their next attack!");
                 Mana -= 90;
                 enemy.IsRestrained = true;
+                Console.WriteLine($"{Name}'s Mana: {Mana}");
             }
             else
             {

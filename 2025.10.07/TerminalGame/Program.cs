@@ -133,7 +133,7 @@ namespace TerminalGame
                     return new Archer(playerName, 120, 40, 15);
                 default:
                     Console.WriteLine("Invalid choice, defaulting to Knight.");
-                    return new Knight(playerName, 200, 50, 20);
+                    return new Knight(playerName, 200, 25, 20);
             }
         }
     }

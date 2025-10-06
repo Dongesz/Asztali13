@@ -18,6 +18,7 @@ namespace TerminalGame
             Hp = 120;
             Dp = 40;
             Defense = 15;
+            MaxHp = 120;
 
             _initialHp = Hp;
             _initialDp = Dp;
