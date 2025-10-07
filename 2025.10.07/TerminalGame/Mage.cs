@@ -16,7 +16,6 @@ namespace TerminalGame
 
         public Mage(string name, int hp, int dp, int defense, int mana) : base(name, hp, dp, defense)
         {
-            Name = "Mage";
             Hp = 150;
             Dp = 40;
             Defense = 10;
@@ -39,14 +38,14 @@ namespace TerminalGame
         {
             if (Mana >= 30)
             {
-                Console.WriteLine($"{Name} casts a powerful spell!");
+                Console.WriteLine($"\n{Name} casts a powerful spell!\n");
                 enemy.Hp -= Dp * 2;
                 Mana -= 30;
-                Console.WriteLine($"{Name}'s Mana: {Mana}");
+                Console.WriteLine($"\n{Name}'s Mana: {Mana}\n");
             }
             else
             {
-                Console.WriteLine($"{Name} uses a basic attack due to low Mana.");
+                Console.WriteLine($"\n{Name} uses a basic attack due to low Mana.\n");
                 enemy.Hp -= Dp;
             }
         }
@@ -54,29 +53,29 @@ namespace TerminalGame
         {
             if (Mana >= 20)
             {
-                Console.WriteLine($"{Name} heals self!");
+                Console.WriteLine($"\n{Name} heals self!\n");
                 Hp = Math.Min(Hp + 50, MaxHp);
                 Mana -= 20;
-                Console.WriteLine($"{Name}'s Mana: {Mana}");
-                Console.WriteLine($"{Name}'s HP after healing: {Hp}/{MaxHp}");
+                Console.WriteLine($"\n{Name}'s Mana: {Mana}\n");
+                Console.WriteLine($"\n{Name}'s HP after healing: {Hp}/{MaxHp}\n");
             }
             else
             {
-                Console.WriteLine($"{Name} tried to heal but has insufficient mana.");
+                Console.WriteLine($"\n{Name} tried to heal but has insufficient mana.\n");
             }
         }
         public void restrain(Enemy enemy)
         {
             if (Mana >= 90)
             {
-                Console.WriteLine($"{Name} restrains the enemy, preventing their next attack!");
+                Console.WriteLine($"\n{Name} restrains the enemy, preventing their next attack!\n");
                 Mana -= 90;
                 enemy.IsRestrained = true;
-                Console.WriteLine($"{Name}'s Mana: {Mana}");
+                Console.WriteLine($"\n{Name}'s Mana: {Mana}\n");
             }
             else
             {
-                Console.WriteLine($"{Name} tried to restrain but has insufficient mana.");
+                Console.WriteLine($"\n{Name} tried to restrain but has insufficient mana.\n");
             }
         }
     }

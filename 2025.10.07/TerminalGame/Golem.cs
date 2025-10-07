@@ -26,11 +26,12 @@ namespace TerminalGame
 
         public override void attack(Player player)
         {
-            Console.WriteLine($"{Name} crushes the ground causing a shock!");
+            Console.WriteLine($"\n{Name} crushes the ground causing a shock!\n");
             base.attack(player);
+            // defense-- Dp++
             Defense = Math.Max(0, Defense - 5);
             Dp += 5;
-            Console.WriteLine($"{Name}'s Defense decreased to {Defense} and Damage increased to {Dp}");
+            Console.WriteLine($"\n{Name}'s Defense decreased to {Defense} and Damage increased to {Dp}\n");
         }
     }
 }

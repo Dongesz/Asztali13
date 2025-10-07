@@ -26,15 +26,16 @@ namespace TerminalGame
 
         public override void attack(Player player)
         {
-            Console.WriteLine($"{Name} bites fiercely!");
+            Console.WriteLine($"\n{Name} bites fiercely!\n");
             base.attack(player);
-            // Zombie special: 10% eséllyel gyógyul
+            // 10% 
             Random rnd = new Random();
             if (rnd.Next(0, 100) < 10)
             {
                 int healAmount = 10;
                 Hp += healAmount;
-                Console.WriteLine($"{Name} regenerates {healAmount} HP!");
+                
+                Console.WriteLine($"\n{Name} regenerates {healAmount} HP!\n");
             }
         }
     }

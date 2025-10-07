@@ -14,7 +14,6 @@ namespace TerminalGame
 
         public Knight(string name, int hp, int dp, int defense) : base(name, hp, dp, defense)
         {
-            Name = "Knight";
             Hp = 200;
             Dp = 50;
             Defense = 20;
@@ -30,7 +29,15 @@ namespace TerminalGame
             Hp = _initialHp;
             Dp = _initialDp;
             Defense = _initialDefense;
-            Console.WriteLine($"{Name} ({GetType().Name}) stats have been reset: HP={Hp}, DP={Dp}, Defense={Defense}");
+            Console.WriteLine($"\n{Name} ({GetType().Name}) stats have been reset: HP={Hp}, DP={Dp}, Defense={Defense}\n");
+        }
+
+        public override void takeDamage(int Dp)
+        {
+            int damageTaken = Math.Max(1, Dp - Defense);
+            Hp -= damageTaken;
+            Console.WriteLine($"\n{Name} ({GetType().Name}) defends and takes {damageTaken} damage (Enemy DP: {Dp}, Defense: {Defense})\n");
+            Console.WriteLine($"\n{Name}'s current HP: {Hp}\n");
         }
 
         // Heavy attack
@@ -38,16 +45,22 @@ namespace TerminalGame
         {
             int damage = Dp * 3;
             enemy.Hp -= damage;
-            Console.WriteLine($"{Name} ({GetType().Name}) performs a HEAVY ATTACK!");
-            Console.WriteLine($"{enemy.Name} took {damage} damage! (Current HP: {enemy.Hp})");
+            Console.WriteLine($"\n{Name} ({GetType().Name}) performs a HEAVY ATTACK!\n");
+            Console.WriteLine($"\n{enemy.Name} took {damage} damage! (Current HP: {enemy.Hp})\n");
         }
-
-        public override void takeDamage(int Dp)
+        public void SpinningSlash(Enemy enemy)
         {
-            int damageTaken = Math.Max(1, Dp - Defense);
-            Hp -= damageTaken;
-            Console.WriteLine($"{Name} ({GetType().Name}) defends and takes {damageTaken} damage (Enemy DP: {Dp}, Defense: {Defense})");
-            Console.WriteLine($"{Name}'s current HP: {Hp}");
+            int damage = Dp * 2;
+            enemy.Hp -= damage;
+            Console.WriteLine($"\n{Name} ({GetType().Name}) performs a SPINNING SLASH!\n");
+            Console.WriteLine($"\n{enemy.Name} took {damage} damage! (Current HP: {enemy.Hp})\n");
+        }
+        public void GroundSlam(Enemy enemy)
+        {
+            int damage = Dp * 4;
+            enemy.Hp -= damage;
+            Console.WriteLine($"\n{Name} ({GetType().Name}) performs a GROUND SLAM!\n");
+            Console.WriteLine($"\n{enemy.Name} took {damage} damage! (Current HP: {enemy.Hp})\n");
         }
     }
 }

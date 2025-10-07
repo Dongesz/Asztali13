@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 
 namespace TerminalGame
 {
@@ -12,7 +11,7 @@ namespace TerminalGame
 
             Player player = ChoosePlayerClass();
 
-            List<Enemy> enemies = new List<Enemy>()
+            List<Enemy> enemies = new List<Enemy>
             {
                 new Zombie("Zombie", 120, 20, 10),
                 new Wolf("Wolf", 130, 25, 8),
@@ -23,30 +22,37 @@ namespace TerminalGame
             int totalRounds = int.Parse(Console.ReadLine() ?? "1");
 
             int wins = 0;
-
+            
             for (int round = 1; round <= totalRounds; round++)
             {
                 Console.WriteLine($"\n--- Round {round} ---");
 
-                // Véletlenszerű ellenfél kiválasztás
                 Enemy enemy = enemies[new Random().Next(enemies.Count)];
                 enemy.resetStats();
                 Console.WriteLine($"{enemy.Name} appears!");
 
                 bool playerTurn = false;
 
-                // A kör addig tart amíg valamelyikük HP > 0
                 while (player.Hp > 0 && enemy.Hp > 0)
                 {
                     if (playerTurn)
                     {
-                        // Player attack
                         Console.WriteLine($"Your turn! Choose attack:");
                         Console.WriteLine("1. Normal attack");
                         if (player is Mage mage)
                         {
                             Console.WriteLine("2. Heal (Costs 20 Mana)");
                             Console.WriteLine("3. Restrain enemy (Costs 90 Mana)");
+                        }
+                        else if (player is Archer archer)
+                        {
+                            Console.WriteLine("2. Multi shot");
+                            Console.WriteLine("3. Life Drain arrow");
+                        }
+                        else if (player is Knight knight)
+                        {
+                            Console.WriteLine("2. Ground slam");
+                            Console.WriteLine("3. Spinning slash");
                         }
 
                         string choice = Console.ReadLine();
@@ -56,17 +62,17 @@ namespace TerminalGame
                                 player.attack(enemy);
                                 break;
                             case "2":
-                                if (player is Mage mage2)
-                                    mage2.heal();
-                                else
-                                    Console.WriteLine("Invalid choice.");
-                                continue;
+                                if (player is Mage mage2) mage2.heal();
+                                else if (player is Archer archer2) archer2.MultiShot(enemy);
+                                else if (player is Knight knight2) knight2.GroundSlam(enemy);
+                                else Console.WriteLine("Invalid choice.");
+                                break;
                             case "3":
-                                if (player is Mage mage3)
-                                    mage3.restrain(enemy);
-                                else
-                                    Console.WriteLine("Invalid choice.");
-                                continue;
+                                if (player is Mage mage3) mage3.restrain(enemy);
+                                else if (player is Archer archer3) archer3.LifeDrainArrow(enemy);
+                                else if (player is Knight knight3) knight3.SpinningSlash(enemy);
+                                else Console.WriteLine("Invalid choice.");
+                                break;
                             default:
                                 Console.WriteLine("Invalid choice, normal attack used.");
                                 player.attack(enemy);
@@ -88,8 +94,7 @@ namespace TerminalGame
 
                     Console.WriteLine($"{player.Name} HP: {(player.Hp < 0 ? 0 : player.Hp)} | {enemy.Name} HP: {enemy.Hp}");
 
-                    // Váltás
-                    playerTurn = !playerTurn;
+                    playerTurn = !playerTurn; 
                 }
 
                 if (player.Hp > 0)
@@ -106,8 +111,18 @@ namespace TerminalGame
 
             Console.WriteLine($"Game Over! You won {wins} out of {totalRounds} rounds.");
 
-            // Statok mentése fájlba
             FileManager.SavePlayerStats(player, totalRounds, wins);
+
+            string leaderboard = FileManager.GetLeaderboard();
+            if (!string.IsNullOrEmpty(leaderboard))
+            {
+                Console.WriteLine("\nTop 10 Leaderboard (by total wins):");
+                Console.WriteLine(leaderboard);
+            }
+            else
+            {
+                Console.WriteLine("\nNo leaderboard data available yet.");
+            }
 
             Console.WriteLine("Game stats saved. Press any key to exit.");
             Console.ReadKey();
@@ -133,7 +148,7 @@ namespace TerminalGame
                     return new Archer(playerName, 120, 40, 15);
                 default:
                     Console.WriteLine("Invalid choice, defaulting to Knight.");
-                    return new Knight(playerName, 200, 25, 20);
+                    return new Knight(playerName, 200, 50, 20);
             }
         }
     }

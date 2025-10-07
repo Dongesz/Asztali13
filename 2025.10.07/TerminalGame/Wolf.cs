@@ -26,13 +26,14 @@ namespace TerminalGame
         }
 
         public override void attack(Player player)
-        {
-            Console.WriteLine($"{Name} lunges at the player!");
+        {   
+            Console.WriteLine($"\n{Name} lunges at the player!\n");
             base.attack(player);
             SpecialAttackCount++;
+            // minden 3.
             if (SpecialAttackCount % 3 == 0)
             {
-                Console.WriteLine($"{Name} uses a ferocious double attack!");
+                Console.WriteLine($"\n{Name} uses a ferocious double attack!\n");
                 player.Hp -= Dp;
             }
         }

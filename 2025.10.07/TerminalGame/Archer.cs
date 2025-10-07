@@ -14,7 +14,6 @@ namespace TerminalGame
 
         public Archer(string name, int hp, int dp, int defense) : base(name, hp, dp, defense)
         {
-            Name = "Archer";
             Hp = 120;
             Dp = 40;
             Defense = 15;
@@ -27,11 +26,30 @@ namespace TerminalGame
 
         public override void attack(Enemy enemy)
         {
-            Console.WriteLine($"{Name} shoots 4 arrows!");
+            Console.WriteLine($"\n{Name} shoots an arrow!\n");
+            enemy.Hp -= Dp;
+            
+        }
+
+        public void MultiShot(Enemy enemy)
+        {
+            Console.WriteLine($"\n{Name} shoots 4 arrows!\n");
             for (int i = 0; i < 4; i++)
             {
-                enemy.Hp -= Dp;
+                enemy.Hp -= Dp / 2;
             }
+            Console.WriteLine($"\n{enemy.Name} took {Dp * 2} damage from MultiShot! (Current HP: {enemy.Hp})\n");
         }
+
+        public void LifeDrainArrow(Enemy enemy)
+        {
+            Console.WriteLine($"\n{Name} shoots a Life Drain arrow!\n");
+            enemy.Hp -= Dp;
+            Hp += Dp / 2;
+            Console.WriteLine($"\n{enemy.Name} took {Dp} damage! (Current HP: {enemy.Hp})\n");
+            Console.WriteLine($"\n{Name} regained {Dp / 2} HP! (Current HP: {Hp})\n");
+        }
+
+
     }
 }
