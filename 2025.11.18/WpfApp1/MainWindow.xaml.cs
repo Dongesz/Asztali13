@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Media;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -10,7 +11,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-
 namespace WpfApp1
 {
     /// <summary>
@@ -20,11 +20,12 @@ namespace WpfApp1
     {
         private int score = 0;
         private int highscore = 0;
+        private int lives = 3;
         private Random random = new Random();
         private DispatcherTimer timer;
         private Gomb currentActiveButton;
         private double difficulty = 2;
-
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -32,9 +33,7 @@ namespace WpfApp1
 
         private void InitializeGame()
         {
-            GameGrid.Children.Clear();
-            
-
+            GameGrid.Children.Clear();            
             for (int i = 0; i < 9; i++)
             {
                 var button = new Gomb();
@@ -77,21 +76,18 @@ namespace WpfApp1
             if (currentActiveButton != null)
             {
                 currentActiveButton.ChangeColor();
-                //currentActiveButton.Content = "" + currentActiveButton.CurrentState;
                 if(currentActiveButton.CurrentState==ButtonState.Red)
                 {
-                    score -= 5;
-                    ScoreText.Text = $"Score: {score}";
+                    lives--;
+                    LivesText.Text = $"Lives: {lives}";
                 }else
                 if (currentActiveButton.CurrentState == ButtonState.Inactive)
                 {
                     currentActiveButton.ResetButtonState();
-                    currentActiveButton = null;
-                   
+                    currentActiveButton = null;                   
                     ActivateRandomButton();
                 }
-                EndGame();
-                
+                EndGame();                
             }
         }
 
@@ -113,17 +109,18 @@ namespace WpfApp1
             difftxt.Visibility = Visibility.Hidden;
             ScoreText.Visibility = Visibility.Visible;
             GameGrid.Visibility = Visibility.Visible;
-
+            LivesText.Visibility = Visibility.Visible;
             InitializeGame();
             StartGameTimer();
         }
         private void EndGame()
         {
-            if (score < 0)
+            if (lives <= 0)
             {
                 ResetGame();
                 ScoreText.Visibility = Visibility.Hidden;
                 GameGrid.Visibility = Visibility.Hidden;
+                LivesText.Visibility = Visibility.Hidden;
                 startgomb.Visibility = Visibility.Visible;
                 tittle.Visibility = Visibility.Visible;
                 diffslider.Visibility = Visibility.Visible;
@@ -151,11 +148,12 @@ namespace WpfApp1
                 timer = null;
             }
 
+            lives = 3;
+            LivesText.Text = "Lives: 3";
             score = 0;
             GameGrid.Children.Clear();
             ScoreText.Text = $"Score: {score}";
         }
-
     }
 
     public enum ButtonState
@@ -165,6 +163,4 @@ namespace WpfApp1
         Yellow,
         Red
     }
-
-    
 }

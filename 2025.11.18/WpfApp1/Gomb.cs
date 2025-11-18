@@ -10,10 +10,8 @@ using System.Windows.Media.Media3D;
 
 namespace WpfApp1
 {
-   
         public class Gomb : Button
         {
-            private Random random = new Random();
             public ButtonState CurrentState { get; private set; } = ButtonState.Inactive;
 
             public Gomb()
@@ -46,12 +44,11 @@ namespace WpfApp1
                         CurrentState = ButtonState.Inactive;
                         Background = Brushes.Gray;
                         break;
-            }
+                }
             }
 
             public virtual int CalculateScore()
-            {
-                
+            {                
                 switch(CurrentState)
                 {
                     case ButtonState.Green:
@@ -61,7 +58,6 @@ namespace WpfApp1
                     default:
                         return 0;
                 }
-
             }
 
             public virtual void ResetButtonState()
@@ -74,6 +70,6 @@ namespace WpfApp1
             {
                 Template = (ControlTemplate)window.FindResource("NoMouseOverButtonTemplate");
             }
-    }
+        }
 }
 

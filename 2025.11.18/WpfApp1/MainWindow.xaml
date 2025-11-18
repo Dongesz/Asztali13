@@ -25,10 +25,12 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Visibility="Hidden" x:Name="ScoreText" Grid.Row="1" Text="Score: 0" FontSize="20" Margin="10"/>
+        <TextBlock Visibility="Hidden" x:Name="LivesText" Grid.Row="1" Text="Lives: 3" FontSize="20" Margin="263,64,-243,-44"/>
         <UniformGrid Visibility="Hidden" x:Name="GameGrid"  Rows="3" Columns="3" Margin="10">
+
         </UniformGrid>
 
-        <TextBlock x:Name="tittle" Text="A 9×9-es rácson véletlenszerűen felvillan egy mező: először zöld, majd rövid idő után sárga, végül piros lesz. Kattints a zöld vagy sárga mezőre pontszerzésért. Pontozás: Zöld = +10 p, Sárga = +5 p, ha pirosra váltasz, akkor -5p" FontSize="20" Margin="10,10,-5,94" TextWrapping="Wrap" MaxWidth="300"/>
+        <TextBlock x:Name="tittle" Text="A 9×9-es rácson véletlenszerűen felvillan egy mező: először zöld, majd rövid idő után sárga, végül piros lesz. Kattints a zöld vagy sárga mezőre pontszerzésért. Pontozás: Zöld = +10 p, Sárga = +5 p, ha pirosra váltasz, akkor -1 élet, 3 élet áll rendelkezésedre!" FontSize="20" Margin="10,10,-5,94" TextWrapping="Wrap" MaxWidth="300"/>
         <Button Name="startgomb" Content="Play" HorizontalAlignment="Center" Margin="0,228,0,0"  VerticalAlignment="Top" FontSize="55" Click="StartGame" Width="218" Height="79"/>
         <Slider HorizontalAlignment="Center" Margin="0,9,0,0" Minimum="0.5" Maximum="2" TickPlacement="BottomRight" Ticks="0.5,1.25,2" IsSnapToTickEnabled="True" VerticalAlignment="Top" Width="202"  ValueChanged="Difficulty" Name="diffslider" FlowDirection="RightToLeft" Value="2" Grid.Row="1"/>
         <Grid Margin="0,56,0,0" HorizontalAlignment="Stretch" Name="difftxt">
