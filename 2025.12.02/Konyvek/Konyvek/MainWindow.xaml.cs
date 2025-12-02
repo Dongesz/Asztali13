@@ -32,6 +32,10 @@ namespace Konyvek
             Elerhető = elerhető;
         }
     }
+    class Cim
+    {
+        public string cim { get; set; }
+    }
     public partial class MainWindow : Window
     {
         List<Konyv> konyvek = new List<Konyv>();
@@ -53,7 +57,87 @@ namespace Konyvek
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(konyvek.Count().ToString());
+            if (konyvek.Count > 0)
+            {
+                MessageBox.Show(konyvek.Count().ToString());
+            }
+            else
+            {
+                MessageBox.Show("A lista üres!");
+            }
+            
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (konyvek.Count > 0)
+            {
+                MessageBox.Show(konyvek.MaxBy(x => x.Oldalszám).Cím);
+            }
+            else
+            {
+                MessageBox.Show("A lista üres!");
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (konyvek.Count > 0)
+            {
+                double avg = konyvek.Average(x => x.Oldalszám);
+                MessageBox.Show(avg.ToString());
+            }
+            else
+            {
+                MessageBox.Show("A lista üres!");
+            }
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            if (konyvek.Count > 0)
+            {
+                dataGrid.ItemsSource = konyvek.Where(x => x.Elerhető);
+            }
+            else
+            {
+                MessageBox.Show("A lista üres!");
+            }
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            if (konyvek.Count > 0)
+            {
+                List<Cim> cimek = new List<Cim>();
+                foreach (var item in konyvek)
+                {
+                    cimek.Add(new Cim{cim = item.Cím});
+                }
+                dataGrid.ItemsSource = cimek;
+            }
+            else
+            {
+                MessageBox.Show("A lista üres!");
+            }
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            if (konyvek.Count > 0)
+            {
+                dataGrid.ItemsSource = konyvek.OrderBy(x => x.Szerző);
+            }
+            else
+            {
+                MessageBox.Show("A lista üres!");
+            }
+        }
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dataGrid.SelectedItem != null && dataGrid.SelectedItem is Konyv) 
+            progressBar.Value = ((Konyv)dataGrid.SelectedItem).Oldalszám;
         }
     }
 }
