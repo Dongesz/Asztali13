@@ -94,5 +94,20 @@ namespace WpfApp1
             }
             dataGrid.ItemsSource = filmek.OrderBy(x => x.Cim).ToList();
         }
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (!(filmek.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            if (dataGrid.SelectedItem is Film)
+            {
+                progressBar.Value = (double)((Film)dataGrid.SelectedItem).Ertekeles;
+                MessageBox.Show($"A kivalasztott film: {((Film)dataGrid.SelectedItem).Cim}\nErtekeles: {((Film)dataGrid.SelectedItem).Ertekeles}");
+            }
+
+        }
     }
 }

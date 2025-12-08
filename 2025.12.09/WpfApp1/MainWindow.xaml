@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Filmek" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Grid.Column="1" x:Name="dataGrid" AutoGenerateColumns="True" ColumnWidth="*"/>
+        <DataGrid Grid.Column="1" x:Name="dataGrid" AutoGenerateColumns="True" ColumnWidth="*" SelectionChanged="dataGrid_SelectionChanged"/>
         <StackPanel Grid.Column="0" Orientation="Vertical" Margin="10">
             <Button Content="Filmek betoltese" Click="FilmekBetoltese" Margin="5" Width="250px"/>
             <Button Content="Hany film van?" Click="FilmekSzama" Margin="5" Width="250px"/>
@@ -20,8 +20,7 @@
             <Button Content="Csak sci-fi" Click="CsakScifi" Margin="5" Width="250px"/>
             <Button Content="Csak cimek" Click="CsakCim" Margin="5" Width="250px"/>
             <Button Content="Rendezes cim szerint" Click="RendezesCim" Margin="5" Width="250px"/>
-
+            <ProgressBar x:Name="progressBar" Minimum="0" Maximum="10" Margin="5" Height="20px" Width="250px"/>
         </StackPanel>
-        
     </Grid>
 </Window>
