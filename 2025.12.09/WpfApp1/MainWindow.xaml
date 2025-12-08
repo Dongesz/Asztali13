@@ -11,10 +11,11 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Grid.Column="1" x:Name="dataGrid"/>
+        <DataGrid Grid.Column="1" x:Name="dataGrid" AutoGenerateColumns="True" ColumnWidth="*"/>
         <StackPanel Grid.Column="0" Orientation="Vertical" Margin="10">
-            
-            
+            <Button Content="Filmek betoltese" Click="FilmekBetoltese" Margin="10" Width="250px"/>
+            <Button Content="Hany film van?" Click="FilmekSzama" Margin="10" Width="250px"/>
+
         </StackPanel>
         
     </Grid>

@@ -26,6 +26,21 @@ namespace WpfApp1
         {
             filmek.Clear();
             filmek.Add(new Film("Csillagok haboruja", "sci-fi", 121, 8.6));
+            filmek.Add(new Film("Titanic", "drama", 195, 7.8));
+            filmek.Add(new Film("A Gyuruk Ura", "fantasy", 201, 8.8));
+            filmek.Add(new Film("Matrix", "sci-fi", 136, 8.7));
+            filmek.Add(new Film("Shrek", "animacio", 90, 7.9));
+            dataGrid.ItemsSource = filmek;
+        }
+
+        private void FilmekSzama(object sender, RoutedEventArgs e)
+        {
+            if (!(filmek.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            MessageBox.Show($"Filmek szama: {filmek.Count.ToString()}");
         }
     }
 }
