@@ -42,5 +42,15 @@ namespace WpfApp1
             }
             MessageBox.Show($"Filmek szama: {filmek.Count.ToString()}");
         }
+
+        private void LeghosszabbFilm(object sender, RoutedEventArgs e)
+        {
+            if (!(filmek.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            MessageBox.Show($"Leghosszabb film: {filmek.MaxBy(x => x.Hossz).Cim}");
+        }
     }
 }

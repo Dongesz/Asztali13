@@ -13,8 +13,9 @@
         </Grid.ColumnDefinitions>
         <DataGrid Grid.Column="1" x:Name="dataGrid" AutoGenerateColumns="True" ColumnWidth="*"/>
         <StackPanel Grid.Column="0" Orientation="Vertical" Margin="10">
-            <Button Content="Filmek betoltese" Click="FilmekBetoltese" Margin="10" Width="250px"/>
-            <Button Content="Hany film van?" Click="FilmekSzama" Margin="10" Width="250px"/>
+            <Button Content="Filmek betoltese" Click="FilmekBetoltese" Margin="5" Width="250px"/>
+            <Button Content="Hany film van?" Click="FilmekSzama" Margin="5" Width="250px"/>
+            <Button Content="Leghosszabb film?" Click="LeghosszabbFilm" Margin="5" Width="250px"/>
 
         </StackPanel>
         
