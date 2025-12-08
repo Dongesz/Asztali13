@@ -16,6 +16,7 @@
             <Button Content="Filmek betoltese" Click="FilmekBetoltese" Margin="5" Width="250px"/>
             <Button Content="Hany film van?" Click="FilmekSzama" Margin="5" Width="250px"/>
             <Button Content="Leghosszabb film?" Click="LeghosszabbFilm" Margin="5" Width="250px"/>
+            <Button Content="Atlag ertekeles" Click="AtlagErtekeles" Margin="5" Width="250px"/>
 
         </StackPanel>
         

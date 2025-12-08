@@ -52,5 +52,15 @@ namespace WpfApp1
             }
             MessageBox.Show($"Leghosszabb film: {filmek.MaxBy(x => x.Hossz).Cim}");
         }
+
+        private void AtlagErtekeles(object sender, RoutedEventArgs e)
+        {
+            if (!(filmek.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            MessageBox.Show($"Ertekelesek atlaga: {filmek.Average(x => x.Ertekeles)}");
+        }
     }
 }
