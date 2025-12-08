@@ -19,6 +19,7 @@
             <Button Content="Atlag ertekeles" Click="AtlagErtekeles" Margin="5" Width="250px"/>
             <Button Content="Csak sci-fi" Click="CsakScifi" Margin="5" Width="250px"/>
             <Button Content="Csak cimek" Click="CsakCim" Margin="5" Width="250px"/>
+            <Button Content="Rendezes cim szerint" Click="RendezesCim" Margin="5" Width="250px"/>
 
         </StackPanel>
         

@@ -84,5 +84,15 @@ namespace WpfApp1
                 .Select(x => new { Cim = x.Cim })
                 .ToList();
         }
+
+        private void RendezesCim(object sender, RoutedEventArgs e)
+        {
+            if (!(filmek.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            dataGrid.ItemsSource = filmek.OrderBy(x => x.Cim).ToList();
+        }
     }
 }
