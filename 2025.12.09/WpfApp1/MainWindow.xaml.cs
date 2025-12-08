@@ -72,5 +72,17 @@ namespace WpfApp1
             }
             dataGrid.ItemsSource = filmek.Where(x => x.Mufaj == "sci-fi");
         }
+
+        private void CsakCim(object sender, RoutedEventArgs e)
+        {
+            if (!(filmek.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            dataGrid.ItemsSource = filmek
+                .Select(x => new { Cim = x.Cim })
+                .ToList();
+        }
     }
 }
