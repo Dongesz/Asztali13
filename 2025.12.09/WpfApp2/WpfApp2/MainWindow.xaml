@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Urhajok" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dataGrid" Grid.Column="1" AutoGenerateColumns="True" ColumnWidth="*"/>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Background="DarkBlue">
+            <Label Content="Urhajo Muveletek" FontSize="25" Foreground="white"/>
+            <Button Content="Adatok betoltese" Margin="5" Click="AdatokBetoltese"/>
+        </StackPanel>
     </Grid>
 </Window>
