@@ -49,5 +49,15 @@ namespace WpfApp2
             }
             MessageBox.Show($"Az urhajok szama: {urhajok.Count}");
         }
+
+        private void LegnagyobbHatotav(object sender, RoutedEventArgs e)
+        {
+            if (!(urhajok.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            MessageBox.Show($"Legnagyobb hatotavu urhajo: {urhajok.MaxBy(x => x.MaxHatotav).Nev}");
+        }
     }
 }

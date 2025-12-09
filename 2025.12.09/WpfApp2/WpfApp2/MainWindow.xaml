@@ -16,6 +16,7 @@
             <Label Content="Urhajo Muveletek" FontSize="25" Foreground="white"/>
             <Button Content="Adatok betoltese" Margin="5" Click="AdatokBetoltese"/>
             <Button Content="Hány urhajo van?" Margin="5" Click="HanyUrhajo"/>
+            <Button Content="Legnagyobb hatotav?" Margin="5" Click="LegnagyobbHatotav"/>
         
         </StackPanel>
     </Grid>
