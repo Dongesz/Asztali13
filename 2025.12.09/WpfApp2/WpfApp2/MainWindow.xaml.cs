@@ -35,7 +35,7 @@ namespace WpfApp2
                 new Urhajo("Pioneer-VII", 6, 640000, 70, "NASA", "Folyamatban", 2024),
                 new Urhajo("Titan-Hawk", 14, 1050000, 48, "SpaceX", "Sikeres", 2021),
                 new Urhajo("CosmoJet", 5, 430000, 93, "JAXA", "Sikertelen", 2016),
-                new Urhajo("Nebula-FX", 11, 870000, 60, "ESA", "Sikeres", 2020)
+                new Urhajo("Nebula-FX", 10, 870000, 60, "ESA", "Sikeres", 2020)
             };
             dataGrid.ItemsSource = urhajok;
         }
@@ -67,7 +67,18 @@ namespace WpfApp2
                 MessageBox.Show("A lista ures!");
                 return;
             }
-            dataGrid.ItemsSource = urhajok.Where(x => x.KuldetesStatus == "Sikeres").ToList();
+            
+                dataGrid.ItemsSource = urhajok.Where(x => x.KuldetesStatus == "Sikeres").ToList();
+        }
+
+        private void AtlagosLegenysegszam(object sender, RoutedEventArgs e)
+        {
+            if (!(urhajok.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            MessageBox.Show($"Atlagos legenysegszam: {urhajok.Average(x => x.Legenyseg)}");
         }
     }
 }

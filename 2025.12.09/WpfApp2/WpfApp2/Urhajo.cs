@@ -9,7 +9,7 @@ namespace WpfApp2
     public class Urhajo
     {
         public string Nev {  get; set; }
-        public int Legenyseg {  get; set; }
+        public double Legenyseg {  get; set; }
         public int MaxHatotav {  get; set; }
         public int UzemanyagSzint {  get; set; }    
         public string Gyarto {  get; set; }  
