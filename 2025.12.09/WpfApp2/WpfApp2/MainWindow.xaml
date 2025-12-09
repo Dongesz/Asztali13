@@ -20,7 +20,8 @@
             <Button Content="Kik voltk sikeres kuldetesen?" Margin="5" Click="SikeresKuldetes"/>
             <Button Content="Atlagos legenysegszam?" Margin="5" Click="AtlagosLegenysegszam"/>
             <Button Content="Csoportosias gyartok szerint" Margin="5" Click="GyartokSzerintCsop"/>
-        
+            <Button Content="Kereses nev alapjan" Margin="5" Click="KeresesNevAlapjan"/>
+            <TextBox x:Name="textBox" Margin="5"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -90,5 +90,15 @@ namespace WpfApp2
             }
             dataGrid.ItemsSource = urhajok.GroupBy(x => x.Gyarto).Select(x => new { Gyarto = x.Key, Darabszam = x.Count()}).ToList();
         }
+
+        private void KeresesNevAlapjan(object sender, RoutedEventArgs e)
+        {
+            if (!(urhajok.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            dataGrid.ItemsSource = urhajok.Where(x => x.Nev.ToLower().Contains(textBox.Text));
+        }
     }
 }
