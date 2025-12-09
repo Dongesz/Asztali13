@@ -15,6 +15,8 @@
         <StackPanel Orientation="Vertical" Grid.Column="0" Background="DarkBlue">
             <Label Content="Urhajo Muveletek" FontSize="25" Foreground="white"/>
             <Button Content="Adatok betoltese" Margin="5" Click="AdatokBetoltese"/>
+            <Button Content="Hány urhajo van?" Margin="5" Click="HanyUrhajo"/>
+        
         </StackPanel>
     </Grid>
 </Window>

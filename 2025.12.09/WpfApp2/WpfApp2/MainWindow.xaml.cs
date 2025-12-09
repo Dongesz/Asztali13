@@ -39,5 +39,15 @@ namespace WpfApp2
             };
             dataGrid.ItemsSource = urhajok;
         }
+
+        private void HanyUrhajo(object sender, RoutedEventArgs e)
+        {
+            if (!(urhajok.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            MessageBox.Show($"Az urhajok szama: {urhajok.Count}");
+        }
     }
 }
