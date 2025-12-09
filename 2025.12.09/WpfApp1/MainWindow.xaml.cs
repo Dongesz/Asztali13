@@ -107,7 +107,6 @@ namespace WpfApp1
                 progressBar.Value = (double)((Film)dataGrid.SelectedItem).Ertekeles;
                 MessageBox.Show($"A kivalasztott film: {((Film)dataGrid.SelectedItem).Cim}\nErtekeles: {((Film)dataGrid.SelectedItem).Ertekeles}");
             }
-
         }
     }
 }
