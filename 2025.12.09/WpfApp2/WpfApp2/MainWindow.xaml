@@ -17,6 +17,7 @@
             <Button Content="Adatok betoltese" Margin="5" Click="AdatokBetoltese"/>
             <Button Content="Hány urhajo van?" Margin="5" Click="HanyUrhajo"/>
             <Button Content="Legnagyobb hatotav?" Margin="5" Click="LegnagyobbHatotav"/>
+            <Button Content="Kik voltk sikeres kuldetesen?" Margin="5" Click="SikeresKuldetes"/>
         
         </StackPanel>
     </Grid>

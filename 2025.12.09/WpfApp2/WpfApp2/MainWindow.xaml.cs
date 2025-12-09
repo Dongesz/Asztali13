@@ -59,5 +59,15 @@ namespace WpfApp2
             }
             MessageBox.Show($"Legnagyobb hatotavu urhajo: {urhajok.MaxBy(x => x.MaxHatotav).Nev}");
         }
+
+        private void SikeresKuldetes(object sender, RoutedEventArgs e)
+        {
+            if (!(urhajok.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            dataGrid.ItemsSource = urhajok.Where(x => x.KuldetesStatus == "Sikeres").ToList();
+        }
     }
 }
