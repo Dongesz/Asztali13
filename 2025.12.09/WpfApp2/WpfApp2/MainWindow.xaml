@@ -11,7 +11,7 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGrid" Grid.Column="1" AutoGenerateColumns="True" ColumnWidth="*"/>
+        <DataGrid x:Name="dataGrid" Grid.Column="1" AutoGenerateColumns="True" ColumnWidth="*" SelectionChanged="dataGrid_SelectionChanged"/>
         <StackPanel Orientation="Vertical" Grid.Column="0" Background="DarkBlue">
             <Label Content="Urhajo Muveletek" FontSize="25" Foreground="white"/>
             <Button Content="Adatok betoltese" Margin="5" Click="AdatokBetoltese"/>
@@ -22,6 +22,8 @@
             <Button Content="Csoportosias gyartok szerint" Margin="5" Click="GyartokSzerintCsop"/>
             <Button Content="Kereses nev alapjan" Margin="5" Click="KeresesNevAlapjan"/>
             <TextBox x:Name="textBox" Margin="5"/>
+            <Label Content="Uzemanyag szint:" Foreground="White"/>
+            <ProgressBar x:Name="progressBar" Margin="5" Height="25" Minimum="0" Maximum="100"/>
         </StackPanel>
     </Grid>
 </Window>
