@@ -80,5 +80,15 @@ namespace WpfApp2
             }
             MessageBox.Show($"Atlagos legenysegszam: {urhajok.Average(x => x.Legenyseg)}");
         }
+
+        private void GyartokSzerintCsop(object sender, RoutedEventArgs e)
+        {
+            if (!(urhajok.Count > 0))
+            {
+                MessageBox.Show("A lista ures!");
+                return;
+            }
+            dataGrid.ItemsSource = urhajok.GroupBy(x => x.Gyarto).Select(x => new { Gyarto = x.Key, Darabszam = x.Count()}).ToList();
+        }
     }
 }
