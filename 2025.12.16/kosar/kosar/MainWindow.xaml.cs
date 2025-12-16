@@ -92,5 +92,16 @@ namespace kosar
             }
             else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
         }
+
+        private void CsapatAtlagPont(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+                dataGrid.ItemsSource = jatekosok
+                    .GroupBy(x => x.Csapat)
+                    .Select(x => new { Csapat = x.Key, Atlag = x.Average(x => x.PontAtlag)});
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
     }
 }
