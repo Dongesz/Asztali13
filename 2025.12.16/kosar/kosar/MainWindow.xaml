@@ -28,6 +28,7 @@
             <Button Content="5 - Csapat átlagpont" Click="CsapatAtlagPont" Margin="5"/>
             <Button Content="6 - Csapat átlag hatékonyság" Click="CsapatAtlagHatekonysag" Margin="5"/>
             <Button Content="7 - Gyenge jatekosok" Click="GyengeJatekosok" Margin="5"/>
+            <Button Content="8 - Rendezés pontátlag szerint" Click="RendezesPontatlag" Margin="5"/>
 
         </WrapPanel>
     </Grid>

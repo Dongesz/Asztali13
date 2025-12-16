@@ -48,7 +48,7 @@ namespace kosar
     public partial class MainWindow : Window
     {
         List<jatekos> jatekosok = new List<jatekos>();
-
+        bool seged = true;
         public MainWindow()
         {
             InitializeComponent();
@@ -120,6 +120,25 @@ namespace kosar
             if (jatekosok != null)
             {
                 dataGrid.ItemsSource = jatekosok.Where(x => x.HatekonysagiMutato < 20);
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
+
+        private void RendezesPontatlag(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+                
+                if (seged)
+                {
+                    dataGrid.ItemsSource = jatekosok.OrderByDescending(x => x.PontAtlag);
+                    seged = !seged;
+                }
+                else
+                {
+                    dataGrid.ItemsSource = jatekosok.OrderBy(x => x.PontAtlag);
+                    seged = !seged;
+                }
             }
             else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
         }
