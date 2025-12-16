@@ -114,5 +114,14 @@ namespace kosar
             }
             else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
         }
+
+        private void GyengeJatekosok(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+                dataGrid.ItemsSource = jatekosok.Where(x => x.HatekonysagiMutato < 20);
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
     }
 }

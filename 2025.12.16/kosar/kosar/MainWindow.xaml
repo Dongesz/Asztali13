@@ -25,9 +25,10 @@
             <Button Content="2 - Top 3 pontszerző" Click="TopThreeJatekos" Margin="5"/>
             <Button Content="3 - Top 3 pontátlag hatekonysag" Click="PontatlagHatekonysagmin20" Margin="5"/>
             <Button Content="4 - Legtöbb meccs" Click="LegtobbMeccs" Margin="5"/>    
-            <Button Content="5 - Csapat átlagpont" Click="CsapatAtlagPont" Margin="5"/>    
-            <Button Content="6 - Csapat átlag hatékonyság" Click="CsapatAtlagHatekonysag" Margin="5"/>    
-            
+            <Button Content="5 - Csapat átlagpont" Click="CsapatAtlagPont" Margin="5"/>
+            <Button Content="6 - Csapat átlag hatékonyság" Click="CsapatAtlagHatekonysag" Margin="5"/>
+            <Button Content="7 - Gyenge jatekosok" Click="GyengeJatekosok" Margin="5"/>
+
         </WrapPanel>
     </Grid>
 </Window>
