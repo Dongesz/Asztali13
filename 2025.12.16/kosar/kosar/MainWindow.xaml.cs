@@ -65,6 +65,9 @@ namespace kosar
             }
             csapatBox.ItemsSource = csapatnevek;
 
+            minpontSlider.Minimum = jatekosok.Min(x => x.PontAtlag);
+            minpontSlider.Maximum = jatekosok.Max(x => x.PontAtlag);
+
         }
 
         private void OsszesJatekos(object sender, RoutedEventArgs e)
@@ -236,6 +239,11 @@ namespace kosar
                 dataGrid.ItemsSource = jatekosok.Where(x => x.Csapat == csapatBox.SelectedValue.ToString());
             }
             else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
+
+        private void minpontSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            dataGrid.ItemsSource = jatekosok.Where(x => x.PontAtlag < minpontSlider.Value);
         }
     }
 }

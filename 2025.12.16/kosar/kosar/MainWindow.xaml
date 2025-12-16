@@ -16,7 +16,7 @@
             <Label Content="Csapat: " Margin="5"/>
             <ComboBox Name="csapatBox" Width="100" Margin="5" SelectionChanged="csapatBox_SelectionChanged"/>
             <Label Content="Min.pontátlag: " Margin="5"/>
-            <Slider Width="150" Margin="5" VerticalAlignment="Center"/>
+            <Slider x:Name="minpontSlider" Width="150" Margin="5" VerticalAlignment="Center" ValueChanged="minpontSlider_ValueChanged"/>
             <CheckBox Content="15 pontátlag alattiak" Margin="5" VerticalAlignment="Center"/>
         </StackPanel>
         <DataGrid x:Name="dataGrid" Grid.Row="1" ColumnWidth="*" />
