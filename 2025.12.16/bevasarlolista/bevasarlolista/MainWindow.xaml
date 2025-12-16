@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="BevasarloLista" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="dataGrid" Grid.Row="0" ColumnWidth="*"/>
+        <GroupBox Header="termekek" Grid.Row="1">
+            <StackPanel>
+                <Button Content="hozzaad" Margin="5" Width="100" Click="Button_Click"/>
+            </StackPanel>
+        </GroupBox>
 
     </Grid>
 </Window>
