@@ -68,5 +68,14 @@ namespace kosar
         {
             dataGrid.ItemsSource = jatekosok.OrderByDescending(x => x.PontAtlag).Take(3);
         }
+
+        private void PontatlagHatekonysagmin20(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+                dataGrid.ItemsSource = jatekosok.Where(x => x.HatekonysagiMutato >= 20 && x.PontAtlag >= 20);
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
     }
 }
