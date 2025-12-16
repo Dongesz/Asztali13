@@ -142,5 +142,24 @@ namespace kosar
             }
             else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
         }
+
+        private void RendezesHatekonysag(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+
+                if (seged)
+                {
+                    dataGrid.ItemsSource = jatekosok.OrderByDescending(x => x.HatekonysagiMutato);
+                    seged = !seged;
+                }
+                else
+                {
+                    dataGrid.ItemsSource = jatekosok.OrderBy(x => x.HatekonysagiMutato);
+                    seged = !seged;
+                }
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
     }
 }
