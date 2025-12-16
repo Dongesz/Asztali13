@@ -200,5 +200,25 @@ namespace kosar
             }
             else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
         }
+
+        private void LepattanoCsop(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+                dataGrid.ItemsSource = jatekosok
+                    .GroupBy(x => x.LepattanoAtlag)
+                    .Select(x => new { LepattanoAtlag = x.Key, Darabszám = x.Count()});
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
+
+        private void KeresztnevCsop(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+                dataGrid.ItemsSource = jatekosok.GroupBy(x => x.JatekosNeve.Split(' ')[1]).Select(x => new { Nev = x.Key, Darabszam = x.Count()});
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
     }
 }
