@@ -177,7 +177,16 @@ namespace kosar
             if (jatekosok != null)
             {
 
-                dataGrid.ItemsSource = jatekosok.GroupBy(x => x.Csapat).Select(x => new { Csapat = x.Key, LegtobbPont = x.Max(x => x.PontAtlag) });
+                dataGrid.ItemsSource = jatekosok.GroupBy(x => x.Csapat).Select(x => new { Csapat = x.Key, LegmagasabbPontatlag = x.Max(x => x.PontAtlag) });
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
+
+        private void TopFivePontHat(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+                dataGrid.ItemsSource = jatekosok.OrderByDescending(x => x.PontAtlag + x.HatekonysagiMutato).Take(5);
             }
             else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
         }
