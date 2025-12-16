@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5" >
             <Label Content="Csapat: " Margin="5"/>
-            <ComboBox Width="100" Margin="5"/>
+            <ComboBox Name="csapatBox" Width="100" Margin="5" SelectionChanged="csapatBox_SelectionChanged"/>
             <Label Content="Min.pontátlag: " Margin="5"/>
             <Slider Width="150" Margin="5" VerticalAlignment="Center"/>
             <CheckBox Content="15 pontátlag alattiak" Margin="5" VerticalAlignment="Center"/>

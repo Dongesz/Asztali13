@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -57,6 +58,13 @@ namespace kosar
             {
                 jatekosok.Add(new jatekos(s));
             }
+            HashSet<string> csapatnevek = new HashSet<string>();
+            foreach (var item in jatekosok)
+            {
+                csapatnevek.Add(item.Csapat);
+            }
+            csapatBox.ItemsSource = csapatnevek;
+
         }
 
         private void OsszesJatekos(object sender, RoutedEventArgs e)
@@ -216,7 +224,16 @@ namespace kosar
         {
             if (jatekosok != null)
             {
-                dataGrid.ItemsSource = jatekosok.GroupBy(x => x.JatekosNeve.Split(' ')[1]).Select(x => new { Nev = x.Key, Darabszam = x.Count()});
+                dataGrid.ItemsSource = jatekosok.GroupBy(x => x.JatekosNeve.Split(' ')[1]).Select(x => new { Nev = x.Key, Darabszam = x.Count()}).OrderByDescending(x => x.Darabszam).ThenBy(x => x.Nev);
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
+
+        private void csapatBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+                dataGrid.ItemsSource = jatekosok.Where(x => x.Csapat == csapatBox.SelectedValue.ToString());
             }
             else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
         }
