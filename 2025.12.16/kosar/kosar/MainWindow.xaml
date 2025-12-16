@@ -24,6 +24,7 @@
             <Button Content="1 - Össze játékos" Click="OsszesJatekos" Margin="5"/>
             <Button Content="2 - Top 3 pontszerző" Click="TopThreeJatekos" Margin="5"/>
             <Button Content="3 - Top 3 pontátlag hatekonysag" Click="PontatlagHatekonysagmin20" Margin="5"/>
+            <Button Content="4 - Legtöbb meccs" Click="LegtobbMeccs" Margin="5"/>    
         </WrapPanel>
     </Grid>
 </Window>
