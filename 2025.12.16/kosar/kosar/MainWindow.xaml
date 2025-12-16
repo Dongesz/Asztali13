@@ -17,9 +17,9 @@
             <ComboBox Name="csapatBox" Width="100" Margin="5" SelectionChanged="csapatBox_SelectionChanged"/>
             <Label Content="Min.pontátlag: " Margin="5"/>
             <Slider x:Name="minpontSlider" Width="150" Margin="5" VerticalAlignment="Center" ValueChanged="minpontSlider_ValueChanged"/>
-            <CheckBox Content="15 pontátlag alattiak" Margin="5" VerticalAlignment="Center"/>
+            <CheckBox x:Name="checkBox1" Content="15 pontátlag alattiak" Margin="5" VerticalAlignment="Center" Click="Pontatlag15Alatt"/>
         </StackPanel>
-        <DataGrid x:Name="dataGrid" Grid.Row="1" ColumnWidth="*" />
+        <DataGrid x:Name="dataGrid" Grid.Row="1" ColumnWidth="*" LoadingRow="SorSzinek" />
         <WrapPanel Grid.Row="2" Margin="5">
             <Button Content="1 - Össze játékos" Click="OsszesJatekos" Margin="5"/>
             <Button Content="2 - Top 3 pontszerző" Click="TopThreeJatekos" Margin="5"/>

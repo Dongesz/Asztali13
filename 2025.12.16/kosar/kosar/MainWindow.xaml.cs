@@ -245,5 +245,40 @@ namespace kosar
         {
             dataGrid.ItemsSource = jatekosok.Where(x => x.PontAtlag < minpontSlider.Value);
         }
+
+        private void Pontatlag15Alatt(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+                if (checkBox1.IsChecked == true)
+                {
+                    dataGrid.ItemsSource = jatekosok.Where(x => x.PontAtlag < 15);
+                }
+                else
+                {
+                    dataGrid.ItemsSource = jatekosok;
+                }
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
+
+        private void SorSzinek(object sender, DataGridRowEventArgs e)
+        {
+            if (e.Row.Item is jatekos j)
+            {
+                if (j.HatekonysagiMutato >= 25)
+                {
+                    e.Row.Background = Brushes.LimeGreen;
+                }
+                else if (j.HatekonysagiMutato < 20)
+                {
+                    e.Row.Background= Brushes.LightCoral;
+                }
+                else
+                {
+                    e.Row.Background = Brushes.White;
+                }
+            }
+        }
     }
 }
