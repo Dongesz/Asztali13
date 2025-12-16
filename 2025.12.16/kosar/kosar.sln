@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kosar", "kosar\kosar.csproj", "{9DD68C05-2332-4223-A15D-95CD6B8B5A95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DD68C05-2332-4223-A15D-95CD6B8B5A95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD68C05-2332-4223-A15D-95CD6B8B5A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD68C05-2332-4223-A15D-95CD6B8B5A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD68C05-2332-4223-A15D-95CD6B8B5A95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F81D076B-3394-486B-A31B-86D43DF365D2}
+	EndGlobalSection
+EndGlobal
