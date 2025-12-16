@@ -30,6 +30,7 @@
             <Button Content="7 - Gyenge jatekosok" Click="GyengeJatekosok" Margin="5"/>
             <Button Content="8 - Rendezés pontátlag szerint" Click="RendezesPontatlag" Margin="5"/>
             <Button Content="9 - Rendezés hatékonyság szerint" Click="RendezesHatekonysag" Margin="5"/>
+            <Button Content="10 - Játékosok száma csapatonként" Click="JatekosszamCsapatonkent" Margin="5"/>
 
         </WrapPanel>
     </Grid>
