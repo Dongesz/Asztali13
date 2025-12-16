@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -46,14 +47,26 @@ namespace kosar
     }
     public partial class MainWindow : Window
     {
+        List<jatekos> jatekosok = new List<jatekos>();
+
         public MainWindow()
         {
             InitializeComponent();
+            string[] sorok = File.ReadAllLines("Jatekosok.txt");
+            foreach (string s in sorok.Skip(1))
+            {
+                jatekosok.Add(new jatekos(s));
+            }
         }
 
         private void OsszesJatekos(object sender, RoutedEventArgs e)
         {
+            dataGrid.ItemsSource = jatekosok;
+        }
 
+        private void TopThreeJatekos(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = jatekosok.OrderByDescending(x => x.PontAtlag).Take(3);
         }
     }
 }
