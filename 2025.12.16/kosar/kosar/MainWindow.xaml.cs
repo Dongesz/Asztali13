@@ -171,5 +171,15 @@ namespace kosar
             }
             else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
         }
+
+        private void LegjobbPontatlagCsapatonkent(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+
+                dataGrid.ItemsSource = jatekosok.GroupBy(x => x.Csapat).Select(x => new { Csapat = x.Key, LegtobbPont = x.Max(x => x.PontAtlag) });
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
     }
 }
