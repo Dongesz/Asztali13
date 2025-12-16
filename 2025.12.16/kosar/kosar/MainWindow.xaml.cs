@@ -190,5 +190,15 @@ namespace kosar
             }
             else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
         }
+
+        private void LegkevesebbMeccs(object sender, RoutedEventArgs e)
+        {
+            if (jatekosok != null)
+            {
+                var legkevesebbMeccs = jatekosok.Min(x => x.LejatszottMeccsek);
+                dataGrid.ItemsSource = jatekosok.Where(x => x.LejatszottMeccsek == legkevesebbMeccs);
+            }
+            else MessageBox.Show("Nincsenek jatekosok az adatbazisban!");
+        }
     }
 }

@@ -33,6 +33,7 @@
             <Button Content="10 - Játékosok száma csapatonként" Click="JatekosszamCsapatonkent" Margin="5"/>
             <Button Content="11 - Legjobb pontatlag csapatonként" Click="LegjobbPontatlagCsapatonkent" Margin="5"/>
             <Button Content="12 - Top 5 pontatlag + hatekonysag" Click="TopFivePontHat" Margin="5"/>
+            <Button Content="13 - Legkevesebb meccs" Click="LegkevesebbMeccs" Margin="5"/>
 
         </WrapPanel>
     </Grid>
