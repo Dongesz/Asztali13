@@ -1,0 +1,16 @@
+﻿JatekosNeve,Csapat,LejatszottMeccsek,PontAtlag,LepattanoAtlag
+Zsótér Máté,Falco KC Szombathely,22,15,5
+György Ákos,Falco KC Szombathely,20,12,4
+Bognár Tamás,Alba Fehérvár,21,18,6
+Váradi Dávid,Alba Fehérvár,19,14,7
+Hortobágyi Márk,PVSK-Pannonpower,22,16,5
+Pásztor Dávid,PVSK-Pannonpower,18,10,3
+Szabó Péter,Sopron KC,20,20,8
+Kiss Ádám,Sopron KC,21,17,6
+Nagy Levente,DEAC,19,13,5
+Tóth Bence,DEAC,22,19,7
+Farkas Máté,ZTE KK,20,21,9
+Kovács Balázs,ZTE KK,21,16,6
+Szalai Kristóf,Falco KC Szombathely,18,14,4
+Vincze Dániel,Alba Fehérvár,22,22,8
+Molnár Dávid,Sopron KC,17,11,5
